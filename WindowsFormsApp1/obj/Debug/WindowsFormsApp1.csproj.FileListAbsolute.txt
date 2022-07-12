@@ -1,0 +1,11 @@
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\Scada.RJTextBox.resources
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Enes\source\repos\Scada\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources

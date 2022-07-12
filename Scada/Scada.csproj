@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{097612D5-2911-4AFC-8E7F-AA035AC47DC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Scada</RootNamespace>
+    <AssemblyName>Scada</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="S7.Net, Version=0.13.0.0, Culture=neutral, PublicKeyToken=d5812d469e84c693, processorArchitecture=MSIL">
+      <HintPath>..\packages\S7netplus.0.13.0\lib\net452\S7.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AnaSayfa\Form1ErrorTagler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorLog\FormErrorLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorLog\FormErrorLog.Designer.cs">
+      <DependentUpon>FormErrorLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnaSayfa\TagFormEsleme.cs" />
+    <Compile Include="Forms\LogForms\KullaniciGirisCikisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogForms\KullaniciGirisCikisForm.Designer.cs">
+      <DependentUpon>KullaniciGirisCikisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestForms\InputsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForms\InputsForm.Designer.cs">
+      <DependentUpon>InputsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestForms\memorysForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForms\memorysForm.Designer.cs">
+      <DependentUpon>memorysForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestForms\mwordtestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForms\mwordtestform.Designer.cs">
+      <DependentUpon>mwordtestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestForms\testform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForms\testform.Designer.cs">
+      <DependentUpon>testform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnaSayfa\User.cs" />
+    <Compile Include="Forms\Giris\SifreDegistir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Giris\SifreDegistir.Designer.cs">
+      <DependentUpon>SifreDegistir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recete\FormRecete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Recete\FormRecete.Designer.cs">
+      <DependentUpon>FormRecete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Giris\GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Giris\GirisForm.Designer.cs">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Giris\GirisForm_GirisMenusu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Giris\GirisForm_GirisMenusu.Designer.cs">
+      <DependentUpon>GirisForm_GirisMenusu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Giris\GirisForm_KullaniciArayuzu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Giris\GirisForm_KullaniciArayuzu.Designer.cs">
+      <DependentUpon>GirisForm_KullaniciArayuzu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Recete\ReceteUI\ENTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Recete\ReceteUI\UComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Silo\FormSilo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Silo\FormSilo.Designer.cs">
+      <DependentUpon>FormSilo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormFeedDBDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NormFeedDBDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PictureBoxButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\PlcTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomShapeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\AnaSayfa\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnaSayfa\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormattedTextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\PlcButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Plc\PlcServer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Plc\Tag.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Plc\TagList.cs" />
+    <Compile Include="UI\PlcToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\ResimliPlcButon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\RJTextBox.Designer.cs">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Forms\AnaSayfa\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorLog\FormErrorLog.resx">
+      <DependentUpon>FormErrorLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogForms\KullaniciGirisCikisForm.resx">
+      <DependentUpon>KullaniciGirisCikisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestForms\InputsForm.resx">
+      <DependentUpon>InputsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestForms\memorysForm.resx">
+      <DependentUpon>memorysForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestForms\mwordtestform.resx">
+      <DependentUpon>mwordtestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestForms\testform.resx">
+      <DependentUpon>testform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Giris\SifreDegistir.resx">
+      <DependentUpon>SifreDegistir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recete\FormRecete.resx">
+      <DependentUpon>FormRecete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Silo\FormSilo.resx">
+      <DependentUpon>FormSilo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Giris\GirisForm.resx">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Giris\GirisForm_GirisMenusu.resx">
+      <DependentUpon>GirisForm_GirisMenusu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Giris\GirisForm_KullaniciArayuzu.resx">
+      <DependentUpon>GirisForm_KullaniciArayuzu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RJTextBox.resx">
+      <DependentUpon>RJTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="NormFeedDBDataset.xsc">
+      <DependentUpon>NormFeedDBDataset.xsd</DependentUpon>
+    </None>
+    <None Include="NormFeedDBDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NormFeedDBDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="NormFeedDBDataset.xss">
+      <DependentUpon>NormFeedDBDataset.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_full_screen_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_subtract_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Close_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_collapse_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_ico_Golge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Silo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SiloGolgeli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\İsimsiz-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_error_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_shield_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_shield_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserMaske.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\golge OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3Helezon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm3Helezon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\golge OFF1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Golge3Helezon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm3Helezon1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gri.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Truncu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyol_R105_Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyol_R105_Off%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyol_R105.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyol_R105 Err.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8iE9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zyol_R105-Err.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hlz_RD112_Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hlz_RD112.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hlz_RD112_Err.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elv_R107_Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fan_R0109_Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fan-Sol.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elek 1 Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Klp 1 Acik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Klp 1 Kapalı.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Klepe-1-Err.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fan-Sol-Err.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dagitici 1 Poz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dagitici-1-ERR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elek-1-Run.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elv_R107_Err.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elv_R107_Run.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Elek-1-ERR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Bigbag.png" />
+    <None Include="Resources\Elek-1-Rundeneme.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kaynaklar\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
